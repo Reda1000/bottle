@@ -1,6 +1,6 @@
 console.log('hello!');
 
-var chartDom = [document.getElementById('chart1'), document.getElementById('chart2'), document.getElementById('chart3')];
+var chartDom = [document.getElementById('chart1'), document.getElementById('chart2'), document.getElementById('chart3'), document.getElementById('chart4')];
 var myChart = chartDom.map(_ => echarts.init(_));
 var option;
 
@@ -65,6 +65,43 @@ option && myChart[2].setOption({
       }
   ]
 });
+option && myChart[3].setOption({
+  xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['2014', '2015', '2016', '20217', '2018', '2019', '2020']
+  },
+  yAxis: {
+      type: 'value',
+      show: true,
+      axisLabel: {
+          formatter: function(v) { return v/1000000+' M'; }
+      },
+  },
+  series: [{
+      data: [12100000, 12200000, 12300000, 12400000, 12500000, 12600000, 13000000],
+      type: 'line',
+      smooth: true,
+      lineStyle: {
+          width: 3,
+          shadowColor: 'rgba(0,0,0,0.3)',
+          shadowBlur: 10,
+          shadowOffsetY: 8
+      },
+      markPoint: {
+          data: [
+              {
+                  label: {
+                      formatter: function() { return '13M'; }
+                  }, 
+                  type: 'max', 
+                  name: ''
+              },
+          ]
+      },
+  }]
+})
+
 window.onresize = function() {
   myChart.map(_ => _.resize());
 };
