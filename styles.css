@@ -24,6 +24,10 @@ button {
   padding: 0 1rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 nav {
   padding: 0 3rem;
   height: 3rem;
@@ -39,6 +43,10 @@ nav a {
   padding: 0.5rem;
 }
 
+.primary {
+  color: #FFCF03;
+}
+
 .row {
   display: flex;
 }
@@ -50,7 +58,8 @@ nav a {
 }
 
 .row__item--one, .row__item--two, .row__item--three, .row__item--four, .row__item--five {
-  min-width: 600px
+  min-width: 450px;
+  margin: 1rem;
 }
 .row__item--one {
   flex: 1 0 51%;
@@ -59,12 +68,27 @@ nav a {
   flex: 1 0 34%;
 } 
 .row__item--three {
-  flex: 1
-} .row__item--four, .row__item--five {
-  min-width: 600px
+  flex: 1 0 26%;
+} 
+.row__item--four {
+  flex: 1 0 21%;
+}
+.row__item--five {
+  flex: 1 0 16%;
 }
 
 .section {
   margin: 0 auto;
 }
-.section--spaced {}
+.section--spaced {
+  flex: 1;
+  max-width: 1000px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.column--centered {
+  align-items: center;
+}
