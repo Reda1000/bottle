@@ -43,6 +43,7 @@ nav {
   align-items: center;
   width: 1280px;
   margin: 0 auto;
+  display: flex;
 }
 nav img {
   height: 100%;
