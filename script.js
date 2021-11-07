@@ -1,6 +1,6 @@
 console.log('hello!');
 
-var chartDom = [document.getElementById('chart1'), document.getElementById('chart2'), document.getElementById('chart3'), document.getElementById('chart4')];
+var chartDom = [document.getElementById('chart1') /*, document.getElementById('chart2')*/, document.getElementById('chart3')/*, document.getElementById('chart4')*/];
 var myChart = chartDom.map(_ => echarts.init(_));
 var option;
 
@@ -37,8 +37,8 @@ option = {
 };
 
 option && myChart[0].setOption(option);
-option && myChart[1].setOption(option);
-option && myChart[2].setOption({
+false && option && myChart[1].setOption(option);
+false && option && myChart[2].setOption({
   series: [
       {
           type: 'pie',
@@ -65,7 +65,7 @@ option && myChart[2].setOption({
       }
   ]
 });
-option && myChart[3].setOption({
+option && myChart[1].setOption({
   xAxis: {
       type: 'category',
       boundaryGap: false,
