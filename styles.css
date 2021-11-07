@@ -27,6 +27,7 @@ button {
   padding: 0 3rem;
   font-size: 24px;
   font-weight: 400;
+  box-shadow: 0 0 2rem 0 #7BF39A;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,7 +42,7 @@ nav {
   padding: 0 3rem;
   height: 3rem;
   align-items: center;
-  width: 1280px;
+  max-width: 1280px;
   margin: 1.5rem auto;
   display: flex;
 }
@@ -85,13 +86,15 @@ nav a {
   flex: 1;
 }
 
-.section1, .section8 {
+.section1 {
   display: flex;
   align-items: center;
-  width: 1280px;
+  max-width: 1280px;
   margin: 6rem auto;
+  flex-wrap: wrap-reverse;
 }
-.section1 div, .section3 div {
+.section1 > div {
+  min-width: 400px;
   flex: 1;
 }
 .section1 img {
@@ -102,8 +105,11 @@ nav a {
 .section3 {
   display: flex;
   align-items: center;
-  width: 1280px;
+  max-width: 1280px;
   margin: 0rem auto;
+}
+.section3 > div {
+  flex: 1;
 }
 .section3 img {
   display: block;
@@ -117,7 +123,7 @@ nav a {
 }
 .section4 > div {
   flex: 1 0 26%;
-  min-width: 100px;
+  min-width: 300px;
   position: relative;
   padding: 1.5rem;
 }
@@ -135,13 +141,13 @@ nav a {
 .section5 {
   display: flex;
   align-items: center;
-  width: 1280px;
+  max-width: 1280px;
   margin: 0rem auto;
   flex-wrap: wrap;
 }
 .section5 > div {
   flex: 1 0 21%;
-  min-width: 400px;
+  min-width: 300px;
   position: relative;
   padding: 1.5rem;
 }
@@ -167,7 +173,21 @@ nav a {
 
 .section8 {
   color: white;
-  width: 1280px;
+  max-width: 1280px;
   margin: 3rem auto;
   margin-bottom: 8rem;
+  flex-wrap: wrap-reverse;
+}
+.section8 > div {
+  min-width: 400px;
+  padding: 1rem;
+}
+
+@media (max-width:800px) {
+  .section2 {
+    flex-direction: column;
+  }
+  .switch--row {
+    flex-direction: row !important;
+  }
 }
