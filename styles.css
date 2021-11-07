@@ -6,259 +6,137 @@ body {
   flex-direction: column;
   flex: 1;
   justify-content: stretch;
-  font-size: calc(10px + 0.8vw);
   font-family: LexendDeca, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: rgb(24, 24, 24);
   overflow: none;
+  font-size: 24px;
+  font-weight: 400;
 }
 
-@media (max-width: 767px) {
-  body {
-    font-size: calc(10px + 1.3vw);
-  }
+.spacer { flex: 1; }
+.primary { color: #A11A9A }
+.secondary { color: #FFCF03 }
+.inverted { color: #7BF39A }
+
+button {
+  border-radius: 1.5rem;
+  height: 3rem;
+  border: 0;
+  background: #6CF0BD;
+  padding: 0 3rem;
+  font-size: 24px;
+  font-weight: 400;
 }
 
-@media (min-width: 682px) and (max-width: 1038px) {
-  .hide {
-    display: none !important;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 400;
-  margin-bottom: 1rem;
-  color: black;
-  text-align: center;
 }
 h1 {
-  background: rgb(24, 24, 24);
-}
-h4 {
-  margin-top: calc(-10% - 4rem);
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.body {
-  background: url('https://raw.githubusercontent.com/Reda1000/bottle/master/assets/BlackSection1.svg');
-  padding: 0;
-  background-size: contain;
-  background-position-y: 80px;
-  background-repeat: no-repeat;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.impressum ul {
-  list-style: circle;
-  padding-left: 1rem;
+  font-size: 400%;
 }
 
 nav {
-  display: flex;
-  justify-content: flex-end;
-  padding: 2vw;
-  background: rgb(24, 24, 24);
-}
-
-nav a {
-  flex: 0 0 20%;
-  min-width: 100px;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-}
-
-.box {
-  flex-direction: column;
-  justify-content: flex-start;
-  border: 0.5rem solid white;
-  border-radius: 0.5rem;
-  box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-}
-.box--li {
-  padding: 0;
-  box-shadow: 0px -5px 15px 5px lightgray;
-  border-radius: 0;
-}
-
-.flow {
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  flex-wrap: wrap;
-}
-
-.info {
-  flex: 1 0 26%;
-  min-width: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  margin: 3vh 0;
-}
-.tech {
-  flex: 1 0 26%;
-  min-width: 300px;
-  display: flex;
-  margin: 1rem;
-  color: #607d8b;
-}
-.bubble {
-  flex: 1 0 34%;
-  display: flex;
-  flex-direction: column;
-  min-height: 35vw;
-  min-width: 300px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-content: center;
-  margin: 5vh 5vw;
-}
-
-.tech__box {
-}
-
-.info__text {
-  padding: 1rem;
-  text-align: center;
-}
-
-.info__clip {
-  border: 0.5rem solid white;
-  border-radius: 1.5rem;
-  background: black;
+  padding: 0 3rem;
+  height: 3rem;
+  align-items: center;
+  width: 1280px;
   margin: 0 auto;
-  box-shadow: 5px 5px 15px 15px lightgray;
-  width: 50%;
 }
-
-.info__clip__text {
-  color: white;
-  margin: 0.5rem;
-  text-align: center;
-}
-.info__clip__text span {
-  line-height: 120%;
-  background: rgba(255, 255, 255, 0.4);
-}
-.info--centered {
-  text-align: center;
-  width: 60vw;
-  min-width: 300px;
-  align-self: center;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-
-  padding: 0;
-  padding-top: 45vw;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.section--one {
-  padding-top: 20vw;
-  background-image: url('https://raw.githubusercontent.com/Reda1000/bottle/master/assets/BlackSection1.svg');
-}
-.section--two {
-  background-image: url('https://raw.githubusercontent.com/Reda1000/bottle/master/assets/BlackSection2.svg');
-}
-.section--three {
-  background-image: url('https://raw.githubusercontent.com/Reda1000/bottle/master/assets/BlackSection3.svg');
-}
-.section--four {
-  background-image: url('https://raw.githubusercontent.com/Reda1000/bottle/master/assets/BlackSection4.svg');
-}
-.section--five {
-  background-image: url('https://raw.githubusercontent.com/Reda1000/bottle/master/assets/BlackSection5.svg');
-}
-
-.box--diagram {
-  margin: 1rem auto;
-  min-width: 250px;
-  width: 50%;
+nav img {
   height: 100%;
-  min-height: 400px;
 }
-
-.box--diagram .diagram {
-  width: 100%;
-  height: 100%;
-  min-height: 40vh;
-}
-
-.box--diagram .legend {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-}
-
-.box--quote {
-  size: 80%;
-}
-
-.box--quote .header {
-  display: flex;
-}
-.box--quote .header .profile {
-  display: flex;
-  flex-direction: column;
-}
-
-.box--quote .divider {
-  text-align: right;
-  margin: 1rem 0;
-}
-.box--quote .divider::before {
+nav a {
+  font-weight: 400;
   display: inline-block;
-  content: '';
-  border-top: 1px solid lightskyblue;
+  padding: 0.5rem;
+  width: 125px;
+  text-align: center;
 }
 
-.box--quote .quote {
+.layers {
+  display: flex; align-items: stretch
+}
+.layers__background {
+  width: 0; overflow: visible; display: flex; flex-direction: column;
+}
+.layers__background div {
+  width: 100vw; overflow: visible;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px; 
+}
+.layers__content {
+  flex: 0 1 1280px;
+  margin: 0 auto;
+  display: flex;
+}
+.layers__content div {
+  flex: 1;
 }
 
-.box--quote .more {
-  background: lightgreen;
-  border-radius: 50%;
+.section1, .section3, .section8 {
+  display: flex;
+  align-items: center;
+  width: 1280px;
+  margin: 6rem auto;
+}
+.section1 div, .section3 div {
+  flex: 1;
+}
+.section1 img {
+  flex: 0 0 425px;
+  width: 425px;
+}
+.section3 img {
+  display: block;
+  flex: 1;
+}
+
+.section4 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 250px auto;
+}
+.section4 > div {
+  flex: 1 0 26%;
+  min-width: 100px;
+  position: relative;
+  padding: 1.5rem;
+}
+.member {
+  background:rgba(250,250,250,0.3);
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+.member img {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+}
+
+.section6 {
+  display: flex;
+  margin: 250px auto;
+}
+
+.section7 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 3.5rem 0;
+}
+
+.section8 {
   color: white;
-}
-
-.box--quote .footer {
-  display: flex;
-}
-
-.support {
-  list-style: none;
-  display: flex;
-  padding: 0;
-}
-.support li {
-  width: 8vw;
-}
-.support li a img {
-  width: 50%;
+  width: 1280px;
+  margin: 3rem auto;
+  margin-bottom: 8rem;
 }
